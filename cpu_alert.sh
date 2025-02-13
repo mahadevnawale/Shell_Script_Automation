@@ -18,7 +18,13 @@ if (( $(echo "$CPU_USAGE > $THRESHOLD" | bc -l) )); then
 else
     echo "CPU usage is normal: ${CPU_USAGE}%"
 fi
-How It Works
+
+
+
+
+
+
+# How It Works
 top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}' extracts CPU utilization.
 Threshold (80%) is checked using bc -l for floating-point comparison.
 mail -s sends an email alert if the threshold is exceeded.
