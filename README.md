@@ -20,7 +20,7 @@ Zsh (Z Shell) – Powerful and feature-rich
 Shebang (#!) – First line specifying the interpreter
 sh
 
-#!/bin/bash
+**#!/bin/bash**
 Comments – Lines beginning with # are ignored
 
 # This is a comment
