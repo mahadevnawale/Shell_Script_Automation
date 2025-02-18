@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PROCESS_NAME="apache2"
+
+if !  pgrep -x $PROCESS_NAME > /dev/null
+then
+echo "$PROCESS_NAME is down....." restarting | mail -s "PROCESS_NAME Restart alert" support_team@example.com
+systemctl restart $PROCESS_NAME
+else 
+echo "$PROCESS_NAME is running."
+fi
+
